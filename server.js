@@ -18,6 +18,9 @@ mongoose
 
 // Routes
 const songRoutes = require("./routes/songRoutes");
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
 app.use("/api/songs", songRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
